@@ -1,3 +1,4 @@
+/*
 package com.group.libraryapp.domain.user.loanhistory;
 
 import com.group.libraryapp.domain.user.User;
@@ -11,9 +12,9 @@ import javax.persistence.ManyToOne;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-public class UserLoanHistory {
+public class JavaUserLoanHistory {
 
-  public UserLoanHistory(User user, String bookName) {
+  public JavaUserLoanHistory(User user, String bookName) {
     this.user = user;
     this.bookName = bookName;
   }
@@ -38,11 +39,11 @@ public class UserLoanHistory {
     return isReturn;
   }
 
-  public UserLoanHistory() {
+  public JavaUserLoanHistory() {
 
   }
 
-  public UserLoanHistory(User user, String bookName, boolean isReturn) {
+  public JavaUserLoanHistory(User user, String bookName, boolean isReturn) {
     this.user = user;
     this.bookName = bookName;
     this.isReturn = isReturn;
@@ -58,3 +59,4 @@ public class UserLoanHistory {
   }
 
 }
+*/

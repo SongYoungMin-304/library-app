@@ -4,7 +4,7 @@ import com.group.libraryapp.domain.book.Book
 import com.group.libraryapp.domain.book.BookRepository
 import com.group.libraryapp.domain.user.User
 import com.group.libraryapp.domain.user.UserRepository
-import com.group.libraryapp.domain.user.loanhistory.UserLoanHistory
+import com.group.libraryapp.domain.user.loanHistory.UserLoanHistory
 import com.group.libraryapp.domain.user.loanhistory.UserLoanHistoryRepository
 import com.group.libraryapp.dto.book.request.BookLoanRequest
 import com.group.libraryapp.dto.book.request.BookRequest
@@ -17,7 +17,6 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
-import java.lang.IllegalArgumentException
 
 @SpringBootTest
 class BookServiceTest @Autowired constructor(
@@ -75,7 +74,13 @@ class BookServiceTest @Autowired constructor(
         //givenr
         bookRepository.save(Book("이상한 나라의 엘리스"))
         val savedUser = userRepository.save(User("송영민", null))
-        userLoanHistoryRepository.save(UserLoanHistory(savedUser,"이상한 나라의 엘리스"))
+        userLoanHistoryRepository.save(
+            UserLoanHistory(
+                savedUser,
+                "이상한 나라의 엘리스",
+                false
+            )
+        )
         val bookLoanRequest = BookLoanRequest("송영민", "이상한 나라의 엘리스");
 
         //when & then
@@ -92,7 +97,13 @@ class BookServiceTest @Autowired constructor(
         //given
         bookRepository.save(Book("이상한 나라의 엘리스"))
         val savedUser = userRepository.save(User("송영민", null))
-        userLoanHistoryRepository.save(UserLoanHistory(savedUser,"이상한 나라의 엘리스"))
+        userLoanHistoryRepository.save(
+            UserLoanHistory(
+                savedUser,
+                "이상한 나라의 엘리스",
+                false
+            )
+        )
         val bookLoanRequest = BookReturnRequest("송영민", "이상한 나라의 엘리스");
 
         //when
