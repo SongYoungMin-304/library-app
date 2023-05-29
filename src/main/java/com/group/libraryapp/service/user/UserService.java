@@ -1,3 +1,4 @@
+/*
 package com.group.libraryapp.service.user;
 
 import com.group.libraryapp.domain.user.User;
@@ -47,3 +48,4 @@ public class UserService {
   }
 
 }
+*/
