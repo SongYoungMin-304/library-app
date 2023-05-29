@@ -1,3 +1,4 @@
+/*
 package com.group.libraryapp.domain.user.loanhistory;
 
 import com.group.libraryapp.domain.user.loanHistory.UserLoanHistory;
@@ -8,3 +9,4 @@ public interface UserLoanHistoryRepository extends JpaRepository<UserLoanHistory
   UserLoanHistory findByBookNameAndIsReturn(String bookName, boolean isReturn);
 
 }
+*/
