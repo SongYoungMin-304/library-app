@@ -24,6 +24,7 @@ class UserServiceTest @Autowired constructor(
 
     @AfterEach
     fun clean(){
+        println("클린시작----")
         userRepository.deleteAll()
     }
 
